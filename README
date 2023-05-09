@@ -4,9 +4,9 @@ Author: Blake Dreyer (bdreye02), Date: 21 April 2023
 Purpose -  The purpose of this program is to read in a datafile containing names of musical artists along with songs they were a part of singing. The program then populates an unweighted graph where the artists are vertexes and songs they collaborated on together for the edges. Users than can enter multiple commands to query the data and received responses. Input commands can be entered from the command line or via file, output can be to the command line or into a file.
 
 Files:
-main.cpp - Main program that handles input/output method and interacts with the SixDegrees class, written entirely by me
+main.cpp - Main program that handles input/output method and interacts with the SixDegrees class
 Makefile - allows the program to be compiled and linked with one command
-SixDegrees.cpp - The implementation of my SixDegrees Class. Built solely by me and loads the data into the collabgraph as well as handles user commands about the data.
+SixDegrees.cpp - The implementation of my SixDegrees Class. Built exclusively by me and loads the data into the collabgraph as well as handles user commands about the data.
 SixDegrees.h - Interface for the collabgraph class
 Collabgraph.cpp - implementation of the collabgraph class whose main purpose is to build the graph of Artist objects and the edges that connect them. Some of this file was provided as starter code but I completed most functions as part of the assignment.
 Collabgraph.h - Interface for the Collabgraph class
