@@ -1,0 +1,21 @@
+1. Comp15M1 Project 2 - Six Degrees of Seperation, Phase 02
+2. Author: Blake Dreyer (bdreye02), Date: 21 April 2023
+3. 21 Hours of work Total
+4. Purpose -  The purpose of this program is to read in a datafile containing names of musical artists along with songs they were a part of singing. The program then populates an unweighted graph where the artists are vertexes and songs they collaborated on together for the edges. Users than can enter multiple commands to query the data and received responses. Input commands can be entered from the command line or via file, output can be to the command line or into a file.
+5. I recieved most of the knowledge necessary to complete this assignment from the video lecturees in canvas related to graphs and graph search algorithms. I googled graph bfs and dfs to learn more about the difference between them.
+6. Files Provided:
+artists.txt - sample dataset originally provided with the starter code
+Collabgraph.cpp - implementation of the collabgraph class whose main purpose is to build the graph of Artist objects and the edges that connect them. Most of this file was provided complete as starter code but I filled out two functions as part of the assignment.
+Collabgraph.h - Interface for the Collabgraph class
+justartists.txt - a test file I created to see what would happen if the artists were inputed with no songs as well as test my programs ability to handle input files
+main.cpp - Main program that handles input and interacts with the SixDegrees class
+Makefile - allows the program to be compiled and linked with one command
+README - You're looking at it!
+SixDegrees.cpp - The implementation of my SixDegrees Class. This one was built solely by me and loads the data into the collabgraph as well as handles user commands about the data.
+SixDegrees.h - Interface for the collabgraph class
+testinput.txt/testoutput.txt - files I used to test my programs ability to handle commands and output via files
+7. Compile the program with "make SixDegrees"
+Run the program with "./SixDegrees datafile.txt [input.txt] [output.txt]
+[square brackets] represent optional inputs, if these files are not provided than the command line is used via the standard in/ouput streams.
+8. The collabgraph is a non weighted graph. The algorithm breadth first search (bfs) works by exploring all the immediate neighbors of a node first, then moving on to the next level of the graph and exploring all the neighbors of that node. This leaves a trail of predecesors that traces the shortest distance (amount of edges) from a given source node to a destination node. Implementing the not command did not involve changing this algorithm, I just simply built a vector of artists to exclude and marked their representtive vertex as already visited prior to running the bfs alogrithm. For depth first search (dfs), I utilized a recursive approach. This approach (repeatedly calling dfs on the first neighbor of each node as it is visited) creates a depth first apporach to traversing the graph. This means significantly longer paths are found between the source and destination artist. 
+9. I first implemented the necessary functions to to make CollabGraph completely functional, then built a hollow version of the SixDegrees class that didn't really interact with the graph but instead made each function simply print a debugging statement when it was called. I used this version of SixDegrees to get main functioning and test my programs ability to handle the different versions of input/output the program needed to handle. When that was complete I started populating the graph and designing and testing my algorithms one at time. The only real struggle I ran into was dfs. My initial dfs algorithm was connecting the artists but outputting slightly different paths than what the reference program would. I changed the location of my recursive call and achieved the correct output. 

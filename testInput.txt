@@ -1,0 +1,14 @@
+bfs
+one
+two
+dfs
+one
+two
+not
+one
+two
+exone
+extwo
+exthree
+*
+quit
